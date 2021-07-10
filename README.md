@@ -1,4 +1,4 @@
 # Design-pattern-Observer-assignment
 
 all depensencies are uploaded.
-just need "node Main" to start
+just "node Main" command is needed to start
