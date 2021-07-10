@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var student_1 = require("./student");
+var teacher_1 = require("./teacher");
+var data_1 = require("./data");
+var data = new data_1.Data();
+var s1 = new student_1.Student();
+data.registerObserver(s1);
+data.measureChange('SWE-4134', '10.07.2021 23:56', 'Observer Pattern', 'Nazmul haque');
+var t1 = new teacher_1.Teacher();
+data.registerObserver(t1);
+data.measureChange('SWE-4134', '10.07.2021 23:45', 'Strategy Pattern', 'Nazmul haque');
