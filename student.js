@@ -6,13 +6,13 @@ var Student = /** @class */ (function () {
         this.courseNo = "";
         this.topicName = "";
         this.teacher = "";
-        this.time = "";
+        this.time = new Date();
     }
     Student.prototype.update = function (courseNo, topicName, teacher, time) {
         this.courseNo = courseNo;
         this.topicName = topicName;
         this.teacher = teacher;
-        this.time = time;
+        this.time = new Date(time);
         this.show();
     };
     //private formattedDate = (moment(this.time)).format('DD-MMM-YYYY HH:mm');
@@ -21,7 +21,7 @@ var Student = /** @class */ (function () {
         console.log("Course No: " + this.courseNo);
         console.log("Topic Name: " + this.topicName);
         console.log("Teacher : " + this.teacher);
-        console.log("Date: " + this.time);
+        console.log("Date: " + this.time.toLocaleString('en-us', { hour12: true }));
     };
     return Student;
 }());
